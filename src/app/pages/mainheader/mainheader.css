@@ -1,0 +1,52 @@
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 55px;
+}
+
+header {
+    display: grid;
+    width: 100%;
+    margin: 0;
+    background-color: #FFB399;
+}
+
+h1 {
+    display: grid;
+    color: #FFF0BE;
+    width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+nav ul {
+    display: grid;
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+nav ul li {
+    width: 100%;
+    background-color: #FF9A86;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+nav ul li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #FFF0BE;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+nav ul li:hover {
+    background-color: #F26076;
+}
