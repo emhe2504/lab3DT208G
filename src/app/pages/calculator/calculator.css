@@ -1,0 +1,28 @@
+
+h2 {
+    display: grid;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+section {
+    display: grid;
+    width: 60%;
+    justify-self: center;
+    text-align: left;
+    border: 2px solid #FF9A86;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 4%;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: #ffefeb;
+    border: 1px solid black;
+    margin-right: 1%;
+}

@@ -1,1 +1,27 @@
-<h2>Kalkylator</h2>
+<h2>Kalkylatorer</h2>
+
+<section id="weight">
+    <h3>Kalkylera vikt</h3>
+    <div>
+        <p>Du anger en vikt och den viktenhet du vill konvertera från, kalkylatorn sköter resten.</p>
+        <br>
+        <label for="milligram">Ange vikt: </label>
+        <input type="number" id="input" [(ngModel)]="input">
+    </div>
+
+    <div>
+        <p>Enhet på vikten du angett:</p>
+        <button (click)="milligram()">Milligram</button>
+        <button (click)="gram()">Gram</button>
+        <button (click)="hectogram()">Hektogram</button>
+        <button (click)="kilogram()">Kilogram</button>
+    </div>
+
+    <div>
+        <p><strong>Resultat:</strong></p>
+        <p>Milligram: {{ milResult }}</p>
+        <p>Gram: {{ gramResult }}</p>
+        <p>Hektogram: {{ hecResult }}</p>
+        <p>Kilogram: {{ kilResult }}</p>
+    </div>
+</section>
