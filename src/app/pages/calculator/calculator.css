@@ -1,4 +1,10 @@
 
+#measure {
+    display: grid;
+    width: 100%;
+    opacity: 0.5;
+}
+
 h2 {
     display: grid;
     text-align: center;
