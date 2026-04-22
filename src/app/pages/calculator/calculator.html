@@ -11,10 +11,10 @@
 
     <div>
         <p>Enhet på vikten du angett:</p>
-        <button (click)="milligram()">Milligram</button>
-        <button (click)="gram()">Gram</button>
-        <button (click)="hectogram()">Hektogram</button>
-        <button (click)="kilogram()">Kilogram</button>
+        <button (click)="convertFromMilligram()">Milligram</button>
+        <button (click)="convertFromGram()">Gram</button>
+        <button (click)="convertFromHectogram()">Hektogram</button>
+        <button (click)="convertFromKilogram()">Kilogram</button>
     </div>
 
     <div>
@@ -37,11 +37,11 @@
 
     <div>
         <p>Enhet på längden du angett:</p>
-        <button (click)="millimeter()">Millimeter</button>
-        <button (click)="centimeter()">Centimeter</button>
-        <button (click)="decimeter()">Decimeter</button>
-        <button (click)="meter()">Meter</button>
-        <button (click)="foot()">Foot</button>
+        <button (click)="convertFromMillimeter()">Millimeter</button>
+        <button (click)="convertFromCentimeter()">Centimeter</button>
+        <button (click)="convertFromDecimeter()">Decimeter</button>
+        <button (click)="convertFromMeter()">Meter</button>
+        <button (click)="convertFromFoot()">Foot</button>
     </div>
 
     <div>
@@ -51,5 +51,27 @@
         <p>Decimeter: {{ dmResult }}</p>
         <p>Meter: {{ mResult }}</p>
         <p>Fot: {{ footResult }}</p>
+    </div>
+</section>
+
+<section id="temperature">
+    <h3>Kalkylera temperatur</h3>
+    <div>
+        <p>Du anger den temperatur och den enhet du vill konvertera från.</p>
+        <br>
+        <label for="temperatureInput">Ange temperatur: </label>
+        <input type="number" id="temperatureInput" [(ngModel)]="temperatureInput">
+    </div>
+
+    <div>
+        <p>Enhet på temperaturen du angett:</p>
+        <button (click)="convertFromCelsius()">Celsius</button>
+        <button (click)="convertFromFahrenheit()">Fahrenheit</button>
+    </div>
+
+    <div>
+        <p><strong>Resultat:</strong></p>
+        <p>Celcius: {{ celResult }}</p>
+        <p>Fahrenheit: {{ farResult }}</p>
     </div>
 </section>
