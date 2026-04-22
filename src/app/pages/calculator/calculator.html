@@ -3,10 +3,10 @@
 <section id="weight">
     <h3>Kalkylera vikt</h3>
     <div>
-        <p>Du anger en vikt och den viktenhet du vill konvertera från, kalkylatorn sköter resten.</p>
+        <p>Du anger en vikt och den viktenhet du vill konvertera från.</p>
         <br>
-        <label for="milligram">Ange vikt: </label>
-        <input type="number" id="input" [(ngModel)]="input">
+        <label for="weightInput">Ange vikt: </label>
+        <input type="number" id="weightInput" [(ngModel)]="weightInput">
     </div>
 
     <div>
@@ -23,5 +23,33 @@
         <p>Gram: {{ gramResult }}</p>
         <p>Hektogram: {{ hecResult }}</p>
         <p>Kilogram: {{ kilResult }}</p>
+    </div>
+</section>
+
+<section id="length">
+    <h3>Kalkylera mått</h3>
+    <div>
+        <p>Du anger det mått och den måttenhet du vill konvertera från.</p>
+        <br>
+        <label for="lengthInput">Ange längd: </label>
+        <input type="number" id="lengthInput" [(ngModel)]="lengthInput">
+    </div>
+
+    <div>
+        <p>Enhet på längden du angett:</p>
+        <button (click)="millimeter()">Millimeter</button>
+        <button (click)="centimeter()">Centimeter</button>
+        <button (click)="decimeter()">Decimeter</button>
+        <button (click)="meter()">Meter</button>
+        <button (click)="foot()">Foot</button>
+    </div>
+
+    <div>
+        <p><strong>Resultat:</strong></p>
+        <p>Millimeter: {{ mmResult }}</p>
+        <p>Centimeter: {{ cmResult }}</p>
+        <p>Decimeter: {{ dmResult }}</p>
+        <p>Meter: {{ mResult }}</p>
+        <p>Fot: {{ footResult }}</p>
     </div>
 </section>
