@@ -25,7 +25,8 @@ article {
 #meatball,
 #pasta,
 #lasagne,
-#chicken {
+#chicken,
+#muffins {
     display: grid;
     width: 40%;
     justify-self: center;
