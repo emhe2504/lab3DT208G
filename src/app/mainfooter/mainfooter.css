@@ -1,0 +1,7 @@
+footer {
+    display: grid;
+    text-align: center;
+    background-color: #FFB399;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
