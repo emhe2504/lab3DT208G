@@ -39,3 +39,22 @@ h3 {
     border-radius: 10px;
     box-shadow: 2px 2px 2px #f8c9c0;
 }
+
+@media screen and (max-width: 1000px) {
+
+    section {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    section {
+        width: 80%;
+    }
+
+    #katt1,
+    #katt2 {
+        width: 70%;
+    }
+}

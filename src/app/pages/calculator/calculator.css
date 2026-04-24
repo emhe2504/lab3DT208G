@@ -36,3 +36,26 @@ button {
     border: 1px solid black;
     margin-right: 1%;
 }
+
+@media screen and (max-width: 1000px) {
+
+    section {
+        width: 75%;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    section {
+        width: 80%;
+    }
+
+    button {
+        font-size: 11px;
+    }
+}

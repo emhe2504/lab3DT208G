@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './mainfooter.html',
   styleUrl: './mainfooter.css',
 })
-export class Mainfooter {}
+export class Mainfooter { }

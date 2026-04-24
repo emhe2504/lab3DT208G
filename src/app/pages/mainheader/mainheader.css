@@ -1,8 +1,8 @@
 .story-script-regular {
-  font-family: "Story Script", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 55px;
+    font-family: "Story Script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 55px;
 }
 
 header {
@@ -49,4 +49,26 @@ nav ul li a {
 
 nav ul li:hover {
     background-color: #F26076;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .story-script-regular {
+        font-size: 45px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .story-script-regular {
+        font-size: 35px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
 }
