@@ -37,88 +37,96 @@ export class Calculator {
 
   //Weight
 
-  convertFromMilligram(): void {
+  convertWeight(weightUnit: string): void {
 
-    this.milResult = this.weightInput;
-    this.gramResult = this.weightInput / 1000;
-    this.hecResult = this.weightInput / 100000;
-    this.kilResult = this.weightInput / 1000000;
+    if (weightUnit === 'mg') {
+      this.milResult = this.weightInput;
+      this.gramResult = this.weightInput / 1000;
+      this.hecResult = this.weightInput / 100000;
+      this.kilResult = this.weightInput / 1000000;
+    }
 
-  }
+    if (weightUnit === 'g') {
+      this.milResult = this.weightInput * 1000;
+      this.gramResult = this.weightInput;
+      this.hecResult = this.weightInput / 100;
+      this.kilResult = this.weightInput / 1000;
+    }
 
-  convertFromGram(): void {
-    this.milResult = this.weightInput * 1000;
-    this.gramResult = this.weightInput;
-    this.hecResult = this.weightInput / 100;
-    this.kilResult = this.weightInput / 1000;
-  }
+    if (weightUnit === 'hg') {
+      this.milResult = this.weightInput * 100000;
+      this.gramResult = this.weightInput * 100;
+      this.hecResult = this.weightInput;
+      this.kilResult = this.weightInput / 10;
+    }
 
-  convertFromHectogram(): void {
-    this.milResult = this.weightInput * 100000;
-    this.gramResult = this.weightInput * 100;
-    this.hecResult = this.weightInput;
-    this.kilResult = this.weightInput / 10;
-  }
+    if (weightUnit === 'kg') {
+      this.milResult = this.weightInput * 1000000;
+      this.gramResult = this.weightInput * 1000;
+      this.hecResult = this.weightInput * 10;
+      this.kilResult = this.weightInput;
+    }
 
-  convertFromKilogram(): void {
-    this.milResult = this.weightInput * 1000000;
-    this.gramResult = this.weightInput * 1000;
-    this.hecResult = this.weightInput * 10;
-    this.kilResult = this.weightInput;
   }
 
 
   //Length
 
-  convertFromMillimeter(): void {
-    this.mmResult = this.lengthInput;
-    this.cmResult = this.lengthInput / 10;
-    this.dmResult = this.lengthInput / 100;
-    this.mResult = this.lengthInput / 1000;
-    this.footResult = this.lengthInput / 304.8;
-  }
+  convertLength(lengthUnit: string) {
 
-  convertFromCentimeter(): void {
-    this.mmResult = this.lengthInput * 10;
-    this.cmResult = this.lengthInput;
-    this.dmResult = this.lengthInput / 10;
-    this.mResult = this.lengthInput / 100;
-    this.footResult = this.lengthInput / 30.48;
-  }
+    if (lengthUnit === 'mm') {
+      this.mmResult = this.lengthInput;
+      this.cmResult = this.lengthInput / 10;
+      this.dmResult = this.lengthInput / 100;
+      this.mResult = this.lengthInput / 1000;
+      this.footResult = this.lengthInput / 304.8;
+    }
 
-  convertFromDecimeter(): void {
-    this.mmResult = this.lengthInput * 100;
-    this.cmResult = this.lengthInput * 10;
-    this.dmResult = this.lengthInput;
-    this.mResult = this.lengthInput / 10;
-    this.footResult = this.lengthInput * 0.328084;
-  }
+    if (lengthUnit === 'cm') {
+      this.mmResult = this.lengthInput * 10;
+      this.cmResult = this.lengthInput;
+      this.dmResult = this.lengthInput / 10;
+      this.mResult = this.lengthInput / 100;
+      this.footResult = this.lengthInput / 30.48;
+    }
 
-  convertFromMeter(): void {
-    this.mmResult = this.lengthInput * 1000;
-    this.cmResult = this.lengthInput * 100;
-    this.dmResult = this.lengthInput * 10;
-    this.mResult = this.lengthInput;
-    this.footResult = this.lengthInput * 3.28084;
-  }
+    if (lengthUnit === 'dm') {
+      this.mmResult = this.lengthInput * 100;
+      this.cmResult = this.lengthInput * 10;
+      this.dmResult = this.lengthInput;
+      this.mResult = this.lengthInput / 10;
+      this.footResult = this.lengthInput * 0.328084;
+    }
 
-  convertFromFoot(): void {
-    this.mmResult = this.lengthInput * 304.8;
-    this.cmResult = this.lengthInput * 30.48;
-    this.dmResult = this.lengthInput * 3.048;
-    this.mResult = this.lengthInput * 0.3048;
-    this.footResult = this.lengthInput;
+    if (lengthUnit === 'm') {
+      this.mmResult = this.lengthInput * 1000;
+      this.cmResult = this.lengthInput * 100;
+      this.dmResult = this.lengthInput * 10;
+      this.mResult = this.lengthInput;
+      this.footResult = this.lengthInput * 3.28084;
+    }
+
+    if (lengthUnit === 'foot') {
+      this.mmResult = this.lengthInput * 304.8;
+      this.cmResult = this.lengthInput * 30.48;
+      this.dmResult = this.lengthInput * 3.048;
+      this.mResult = this.lengthInput * 0.3048;
+      this.footResult = this.lengthInput;
+    }
   }
 
   //Temperature
 
-  convertFromCelsius(): void {
-    this.celResult = this.temperatureInput;
-    this.farResult = (this.temperatureInput * (9 / 5)) + 32;
-  }
+  convertTemperature(tempUnit: string) {
 
-  convertFromFahrenheit(): void {
-    this.celResult = (this.temperatureInput - 32) * (5 / 9);
-    this.farResult = this.temperatureInput;
+    if (tempUnit === 'c') {
+      this.celResult = this.temperatureInput;
+      this.farResult = (this.temperatureInput * (9 / 5)) + 32;
+    }
+
+    if (tempUnit === 'f') {
+      this.celResult = (this.temperatureInput - 32) * (5 / 9);
+      this.farResult = this.temperatureInput;
+    }
   }
 }
