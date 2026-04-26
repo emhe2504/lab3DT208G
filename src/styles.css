@@ -17,10 +17,7 @@ app-root {
 
 main {
     display: grid;
-}
-
-router-outlet {
-    display: grid;
+    justify-items: center;
 }
 
 @media screen and (max-width: 1000px) {
