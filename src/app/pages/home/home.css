@@ -27,7 +27,6 @@ article {
 #lasagne,
 #chicken,
 #muffins {
-    display: grid;
     width: 40%;
     border-radius: 10px;
     box-shadow: 3px 3px 3px lightgray;
