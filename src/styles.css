@@ -1,5 +1,5 @@
 body {
-    display: grid;
+    display: block;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ app-root {
 }
 
 main {
-    display: grid;
+    width: 100%;
 }
 
 @media screen and (max-width: 1000px) {
