@@ -1,1 +1,81 @@
-<h2>Kalkylator</h2>
+<picture>
+    <source srcset="measure.webp" type="image/webp">
+    <img id="measure" src="measure.jpg" alt="Glas med mått på">
+</picture>
+
+<h2>Kalkylatorer</h2>
+<p id="startP">På denna sida kan du konvertera vikt, längd och temperatur för att underlätta din bakning och matlagning.
+</p>
+
+<section id="weight">
+    <h3>Kalkylera vikt</h3>
+    <div>
+        <p>Du anger en vikt och den viktenhet du vill konvertera från.</p>
+        <label for="weightInput">Ange vikt: </label>
+        <input type="number" id="weightInput" [(ngModel)]="weightInput">
+    </div>
+
+    <div>
+        <p>Enhet på vikten du angett:</p>
+        <button type="button" (click)="convertWeight('mg')">Milligram</button>
+        <button type="button" (click)="convertWeight('g')">Gram</button>
+        <button type="button" (click)="convertWeight('hg')">Hektogram</button>
+        <button type="button" (click)="convertWeight('kg')">Kilogram</button>
+    </div>
+
+    <div>
+        <p><strong>Resultat:</strong></p>
+        <p>Milligram: {{ milResult }}</p>
+        <p>Gram: {{ gramResult }}</p>
+        <p>Hektogram: {{ hecResult }}</p>
+        <p>Kilogram: {{ kilResult }}</p>
+    </div>
+</section>
+
+<section id="length">
+    <h3>Kalkylera mått</h3>
+    <div>
+        <p>Du anger det mått och den måttenhet du vill konvertera från.</p>
+        <label for="lengthInput">Ange längd: </label>
+        <input type="number" id="lengthInput" [(ngModel)]="lengthInput">
+    </div>
+
+    <div>
+        <p>Enhet på längden du angett:</p>
+        <button type="button" (click)="convertLength('mm')">Millimeter</button>
+        <button type="button" (click)="convertLength('cm')">Centimeter</button>
+        <button type="button" (click)="convertLength('dm')">Decimeter</button>
+        <button type="button" (click)="convertLength('m')">Meter</button>
+        <button type="button" (click)="convertLength('foot')">Fot</button>
+    </div>
+
+    <div>
+        <p><strong>Resultat:</strong></p>
+        <p>Millimeter: {{ mmResult }}</p>
+        <p>Centimeter: {{ cmResult }}</p>
+        <p>Decimeter: {{ dmResult }}</p>
+        <p>Meter: {{ mResult }}</p>
+        <p>Fot: {{ footResult }}</p>
+    </div>
+</section>
+
+<section id="temperature">
+    <h3>Kalkylera temperatur</h3>
+    <div>
+        <p>Du anger den temperatur och den enhet du vill konvertera från.</p>
+        <label for="temperatureInput">Ange temperatur: </label>
+        <input type="number" id="temperatureInput" [(ngModel)]="temperatureInput">
+    </div>
+
+    <div>
+        <p>Enhet på temperaturen du angett:</p>
+        <button type="button" (click)="convertTemperature('c')">Celsius</button>
+        <button type="button" (click)="convertTemperature('f')">Fahrenheit</button>
+    </div>
+
+    <div>
+        <p><strong>Resultat:</strong></p>
+        <p>Celsius: {{ celResult }}</p>
+        <p>Fahrenheit: {{ farResult }}</p>
+    </div>
+</section>

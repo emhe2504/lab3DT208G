@@ -1,0 +1,61 @@
+#measure {
+    display: grid;
+    width: 100%;
+    opacity: 0.5;
+}
+
+h2 {
+    display: grid;
+    text-align: center;
+    margin-top: 3%;
+}
+
+#startP {
+    display: grid;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+section {
+    display: grid;
+    width: 60%;
+    justify-self: center;
+    text-align: left;
+    border: 2px solid #FF9A86;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 4%;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: #ffefeb;
+    border: 1px solid black;
+    margin-right: 1%;
+}
+
+@media screen and (max-width: 1000px) {
+
+    section {
+        width: 75%;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    section {
+        width: 80%;
+    }
+
+    button {
+        font-size: 11px;
+    }
+}
